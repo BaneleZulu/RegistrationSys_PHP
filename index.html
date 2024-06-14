@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration System</title>
+    <meta name="author" content="Nihil">
+    <meta name="description" content="PHP script for employee CRUD of Files">
+    <meta name="keywords" content="PHP, File, Employee System, Registration System">
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" action="employee.php">
+
+            <div class="general_details">
+                <div>
+                    <label for="fn">Firstname</label>
+                    <input type="text" id="fn" name="fn" placeholder="Firstname" required>
+                </div>
+                <div>
+                    <label for="ln">Lastname</label>
+                    <input type="text" id="ln" name="ln" placeholder="Lastname" required>
+                </div>
+            </div>
+            <div class="details">
+                <label for="idno">Identity Number</label>
+                <input type="number" id="idno" name="idno" placeholder="Identity Number" required>
+            </div>
+            <div class="details">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="details">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="details">
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                    <option value="IT">IT</option>
+                </select>
+            </div>
+            <div class="details">
+                <label for="position">Position</label>
+                <input type="text" id="position" name="position" placeholder="Position" required>
+            </div>
+            <div class="details">
+                <label for="strtdate">Start Date</label>
+                <input type="date" id="strtdate" name="strtdate" required>
+            </div>
+            <div class="details">
+                <label for="looker">Supervisor</label>
+                <select id="looker" name="looker" required>
+                    <option value="">Select Supervisor</option>
+                    <option value="Dr. Jugoo">Dr. Jugoo</option>
+                    <option value="Gojo Saturo">Gojo Saturo</option>
+                    <option value="Itachi Uchiha">Itachi Uchiha</option>
+                </select>
+            </div>
+            <div class="button">
+                <input type="submit" value="Submit" name="submit" id="submit">
+            </div>
+        </form>
+
+    </div>
+</body>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        background: #eee;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(2rem);
+        --webkit-backdrop-filter: blur(2rem);
+        background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2));
+        background-size: 3rem;
+        width: 40vw;
+        height: 80vh;
+        border-radius: 2rem;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            border-radius: 1rem;
+            background-color: transparent;
+
+            label {
+                font-size: 1rem;
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            input {
+                color: #333;
+                padding: 0.5rem 1rem;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            input::placeholder {
+                color: #c8c8c8;
+            }
+
+            input:hover,
+            input:focus {
+                border-bottom: 2px solid #333;
+            }
+
+            select {
+                padding: 0.5rem 1.5rem;
+                font-size: .8rem;
+            }
+
+            .general_details {
+                padding: 1rem;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 2rem;
+
+                div> {
+                    display: flex;
+                }
+            }
+
+            .details {
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                padding: .2rem;
+            }
+
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    border-radius: 1rem;
+                    padding: .5rem 1.5rem;
+                    color: #333;
+                    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
+                    cursor: pointer;
+                    transition: all .7s;
+                }
+
+                input:hover {
+                    background-color: #333;
+                    color: #fff;
+                    transition: all .7s;
+                    transform: perspective(600px) rotateY(30deg);
+                }
+            }
+        }
+    }
+</style>
+
+</html>
